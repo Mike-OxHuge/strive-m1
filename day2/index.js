@@ -117,7 +117,7 @@ Create a variable named x (its value must be less than 10). Write the code to pr
 
 /* CODE'S HERE */
 //I already declared a variable x, so this time is going to be y
-let y = Math.floor(Math.random() * 9);
+let y = Math.floor(Math.random() * 10);
 console.log(
   "The random value is: " +
     y +
