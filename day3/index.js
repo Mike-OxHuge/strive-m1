@@ -1,1 +1,1 @@
-console.log("haha cheky bastard! Ain't gonna commit before deadline");
+console.log("haha cheky bastard! Ain't gonna push before deadline");
