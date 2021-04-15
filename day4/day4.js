@@ -101,12 +101,17 @@ HINT: Module Operator
 let checkResult; // declaring an empty variable, where we will store the value given by a function
 
 function check3and7(foo) {
-  if ((foo % 3 == 0 || foo % 7 == 0) && Math.sign(foo) === 1) {
-    // checking remainder === 0 and math.sign checking if the number is positive. returns 1 or -1.
-    checkResult = `The given value ${foo} is a multiple of 3 or 7`;
-    console.log(checkResult);
+  if (Math.sign(foo) === 1) {
+    if (foo % 3 == 0 || foo % 7 == 0) {
+      // checking remainder === 0 and math.sign checking if the number is positive. returns 1 or -1.
+      checkResult = `The given value ${foo} is a multiple of 3 or 7`;
+      console.log(checkResult);
+    } else {
+      checkResult = `The given value ${foo} is not a multiple of 3 or 7.`;
+      console.log(checkResult);
+    }
   } else {
-    checkResult = `The given value ${foo} is not a multiple of 3 or 7.`;
+    checkResult = `The given value ${foo} is not positive.`;
     console.log(checkResult);
   }
 }
