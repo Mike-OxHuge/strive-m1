@@ -540,5 +540,10 @@ console.log(sliced);
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
-
+// the code below is copied and pasted from stack overflow
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) if (num % i === 0) return false;
+  return num > 1;
+};
+console.log(isPrime(50));
 /* This movies array is used throughout the exercises. Please don't change it :)  */
