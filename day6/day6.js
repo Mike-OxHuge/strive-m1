@@ -86,8 +86,7 @@ ex9.onclick = function () {
   ex9change = !ex9change;
 };
 
-// ex 10 (a bit broken)
-// it does change the style, but I can't revert it.
+// ex 10
 let ex10 = document.getElementById("ex10");
 let ex10addClass = document.querySelectorAll("td a");
 let ex10change = true;
