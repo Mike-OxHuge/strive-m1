@@ -122,36 +122,50 @@ ex11.onclick = function () {
   isVisible = !isVisible;
 };
 
-// EX12: Write a function to color the price of each product in a different one every time it's invoked
-// can't make it with a loop :)
+// ex12
+// solution #1
 let ex12 = document.getElementById("ex12");
-// let changePriceColor = document.querySelectorAll("#price");
-let price0 = document.querySelector("#price0");
-let price1 = document.querySelector("#price1");
-let price2 = document.querySelector("#price2");
-let price3 = document.querySelector("#price3");
-let price4 = document.querySelector("#price4");
 let colorization = true;
+// let ex12 = document.getElementById("ex12");
+// let price0 = document.querySelector("#price0");
+// let price1 = document.querySelector("#price1");
+// let price2 = document.querySelector("#price2");
+// let price3 = document.querySelector("#price3");
+// let price4 = document.querySelector("#price4");
+// let colorization = true;
+// ex12.onclick = function () {
+//   if (colorization) {
+//     price0.style.color = "red";
+//     price1.style.color = "blue";
+//     price2.style.color = "yellow";
+//     price3.style.color = "green";
+//     price4.style.color = "purple";
+
+//   } else {
+//     price0.style.color = "black";
+//     price1.style.color = "black";
+//     price2.style.color = "black";
+//     price3.style.color = "black";
+//     price4.style.color = "black";
+
+//   }
+//   colorization = !colorization;
+
+// };
+
+//ex 12 solution #2
+let prices = document.getElementsByClassName("pricetag");
+let colors = ["red", "blue", "yellow", "green", "purple"];
+
 ex12.onclick = function () {
   if (colorization) {
-    price0.style.color = "red";
-    price1.style.color = "blue";
-    price2.style.color = "yellow";
-    price3.style.color = "green";
-    price4.style.color = "purple";
-    // for (let i = 0; i < changePriceColor.length; i++) {
-    //   changePriceColor[i].style.color = "red";
-    // }
+    for (let i = 0; i < prices.length; i++) {
+      for (let j = 0; j < colors.length; j++) {
+        prices[i].style.color = colors[i];
+      }
+    }
   } else {
-    price0.style.color = "black";
-    price1.style.color = "black";
-    price2.style.color = "black";
-    price3.style.color = "black";
-    price4.style.color = "black";
-    // for (let i = 0; i < changePriceColor.length; i++) {
-    //   changePriceColor[i].style.color = "blue";
-    // }
+    for (let i = 0; i < prices.length; i++) prices[i].style.color = "black";
   }
   colorization = !colorization;
-  //   console.log(changePriceColor);
 };
