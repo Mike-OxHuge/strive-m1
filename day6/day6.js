@@ -165,7 +165,9 @@ ex12.onclick = function () {
       }
     }
   } else {
-    for (let i = 0; i < prices.length; i++) prices[i].style.color = "black";
+    for (let i = 0; i < prices.length; i++) {
+      prices[i].style.color = "black";
+    }
   }
   colorization = !colorization;
 };
