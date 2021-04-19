@@ -7,17 +7,208 @@
     <title>Day 6</title>
     <link rel="stylesheet" href="./day6-styles.css" />
   </head>
-  <body>
-    <h1>Day 6</h1>
-    <h2>See the console</h2>
+  <body id="ex8body">
+    <h1 id="ex7h1">Day 6</h1>
+    <!-- homeworks starts here -->
+    <div class="buttons-for-js">
+      <button id="ex12">Ex 12</button>
+      <button id="ex11">Ex 11</button>
+      <button id="ex10">Ex 10</button>
+      <button id="ex9">Ex 9</button>
+      <button id="ex8">Ex 8</button>
+      <button id="ex7">Ex 7</button>
+
+      <h2>Extra:</h2>
+    </div>
+    <div>
+      <h1>Header with a name of the shop</h1>
+      <!-- a TABLE with the top 5 products of your shop -->
+      <table>
+        <tr>
+          <th colspan="4">Top 5 products of my shop</th>
+        </tr>
+
+        <tr>
+          <th>image (randomly generated)</th>
+          <th>Title (clickable link to the product)</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td class="image-box">
+            <img src="https://picsum.photos/200/100?random=1" />
+          </td>
+          <td>
+            <a
+              class=""
+              target="_blank"
+              href="https://www.amazon.com/Archie-McPhee-Accoutrements-Giant-Lobster/dp/B00FN5X5K4/ref=sr_1_2?crid=128F1X512558S&dchild=1&keywords=weird+stuff&qid=1618819482&sprefix=weird+%2Caps%2C311&sr=8-2"
+              >iPhone</a
+            >
+          </td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td id="price">$420</td>
+        </tr>
+        <tr>
+          <td class="image-box">
+            <img src="https://picsum.photos/200/100?random=2" />
+          </td>
+          <td>
+            <a
+              class=""
+              target="_blank"
+              href="https://www.amazon.com/HSTYAIG-Eating-Battery-Powered-Monkey/dp/B07355WF8D/ref=sr_1_3?crid=128F1X512558S&dchild=1&keywords=weird+stuff&qid=1618819482&sprefix=weird+%2Caps%2C311&sr=8-3"
+              >Android</a
+            >
+          </td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td id="price">$69</td>
+        </tr>
+        <tr>
+          <td class="image-box">
+            <img src="https://picsum.photos/200/100?random=3" />
+          </td>
+          <td>
+            <a
+              class=""
+              target="_blank"
+              href="https://www.amazon.com/Accoutrements-11761-Yodelling-Pickle/dp/B0010VS078/ref=sr_1_7?crid=128F1X512558S&dchild=1&keywords=weird+stuff&qid=1618819482&sprefix=weird+%2Caps%2C311&sr=8-7"
+              >Blackberry</a
+            >
+          </td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td id="price">2kg of berries</td>
+        </tr>
+        <tr>
+          <td class="image-box">
+            <img src="https://picsum.photos/200/100?random=4" />
+          </td>
+          <td>
+            <a
+              class=""
+              target="_blank"
+              href="https://www.amazon.com/Rainlin-Chubby-Pillow-Stuffed-Cotton/dp/B07ZMCDNCD/ref=sr_1_6?crid=128F1X512558S&dchild=1&keywords=weird+stuff&qid=1618819482&sprefix=weird+%2Caps%2C311&sr=8-6"
+              >Something else</a
+            >
+          </td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td id="price">Free</td>
+        </tr>
+        <tr>
+          <td class="image-box">
+            <img src="https://picsum.photos/200/100?random=5" />
+          </td>
+          <td>
+            <a
+              class=""
+              target="_blank"
+              href="https://www.amazon.com/Rubies-Conical-Alien-Skull-Flesh/dp/B001K3A45M/ref=sr_1_5?crid=128F1X512558S&dchild=1&keywords=weird+stuff&qid=1618819482&sprefix=weird+%2Caps%2C311&sr=8-5"
+              >WinPhone</a
+            >
+          </td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td id="price">I'll pay you if you take it</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Feedback Form</button>
+
+    <br />
+    <br />
     <a
       href="https://strive-m1-homeworks.netlify.app/day6/day6-dashboard.html"
       target="_blank"
-      >Website to see outputs</a
-    >
+      >Website to see outputs
+    </a>
     <br />
     <br />
     <a href="/index.html"> Back to home</a>
+
+    <hr />
+    <div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="container">
+            <form>
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name..."
+              />
+
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name..."
+              />
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">US</option>
+                <option value="canada">EU</option>
+                <option value="usa">Other</option>
+              </select>
+              <hr />
+              <div class="second-half">
+                <label for="subject">Subject</label>
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quidem
+                  quaerat assumenda delectus dolorem eum quae consectetur minima nulla
+                  molestias nihil cum distinctio voluptas nesciunt, veritatis vero perferendis
+                  ex provident corporis iure ducimus rem obcaecati quisquam deleniti.
+                  Perferendis repudiandae magnam numquam dignissimos vel voluptates itaque
+                  reprehenderit excepturi. Aliquam deleniti cumque a nesciunt incidunt
+                  sapiente nisi assumenda itaque, obcaecati distinctio voluptates, ratione
+                  quidem quia autem sint veritatis. Veritatis quidem numquam repellat
+                  blanditiis veniam? Temporibus cupiditate labore totam nisi architecto
+                  perspiciatis aut, perferendis sed, odio officiis deleniti dicta. Sapiente,
+                  et tenetur autem laboriosam facilis rem voluptas minima ut porro maxime
+                  error possimus nihil incidunt animi doloribus eveniet fugiat neque
+                  asperiores. Neque porro ad dicta atque velit reprehenderit nobis perferendis
+                  quas, nemo, quaerat tempora blanditiis voluptate. Fugiat, totam iure.
+                  Veniam, libero exercitationem aperiam reiciendis ex in officia assumenda,
+                  modi molestias voluptatem esse corporis excepturi debitis quam a
+                  consequatur? Quae incidunt minus ab eveniet maiores, exercitationem
+                  voluptatem? Commodi reiciendis officiis reprehenderit laboriosam, harum odit
+                  minus ipsa molestias praesentium. Accusantium error eligendi nulla omnis
+                  itaque, porro sint eum tempora, excepturi quasi impedit explicabo rem vero
+                  fugit, hic animi delectus? Aperiam, eum delectus? Ex ad perferendis mollitia
+                  eveniet consequatur sit deserunt alias praesentium illum quas! Facilis!"
+                  style="height: 400px"
+                ></textarea>
+
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Adress of the shop:
+        <span id="ex9footer"
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+          corrupti?</span
+        >
+      </p>
+      <hr />
+      <p>The name of the shop</p>
+    </footer>
+    <hr />
     <script src="./day6.js"></script>
   </body>
+  <!-- homework ends here -->
 </html>
