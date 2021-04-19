@@ -94,10 +94,12 @@ let ex10change = true;
 ex10.onclick = function () {
   if (ex10change) {
     for (let i = 0; i < ex10addClass.length; i++) {
+      ex10addClass[i].classList.remove("old-class");
       ex10addClass[i].classList.add("new-class");
     }
   } else {
     for (let i = 0; i < ex10addClass.length; i++) {
+      ex10addClass[i].classList.remove("new-class");
       ex10addClass[i].classList.add("old-class");
     }
   }
