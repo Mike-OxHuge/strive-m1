@@ -86,7 +86,7 @@ ex9.onclick = function () {
   ex9change = !ex9change;
 };
 
-// ex 10
+// ex 10 (a bit broken)
 // it does change the style, but I can't revert it.
 let ex10 = document.getElementById("ex10");
 let ex10addClass = document.querySelectorAll("td a");
@@ -102,7 +102,6 @@ ex10.onclick = function () {
     }
   }
   ex10change = !ex10change;
-  console.log(ex10change);
 };
 
 // ex 11
@@ -123,20 +122,35 @@ ex11.onclick = function () {
 };
 
 // EX12: Write a function to color the price of each product in a different one every time it's invoked
-// can't figure out how to make different colors for each price :(
+// can't make it with a loop :)
 let ex12 = document.getElementById("ex12");
-let changePriceColor = document.querySelectorAll("#price");
+// let changePriceColor = document.querySelectorAll("#price");
+let price0 = document.querySelector("#price0");
+let price1 = document.querySelector("#price1");
+let price2 = document.querySelector("#price2");
+let price3 = document.querySelector("#price3");
+let price4 = document.querySelector("#price4");
 let colorization = true;
 ex12.onclick = function () {
   if (colorization) {
-    for (let i = 0; i < changePriceColor.length; i++) {
-      changePriceColor[i].style.color = "red";
-    }
+    price0.style.color = "red";
+    price1.style.color = "blue";
+    price2.style.color = "yellow";
+    price3.style.color = "green";
+    price4.style.color = "purple";
+    // for (let i = 0; i < changePriceColor.length; i++) {
+    //   changePriceColor[i].style.color = "red";
+    // }
   } else {
-    for (let i = 0; i < changePriceColor.length; i++) {
-      changePriceColor[i].style.color = "blue";
-    }
+    price0.style.color = "black";
+    price1.style.color = "black";
+    price2.style.color = "black";
+    price3.style.color = "black";
+    price4.style.color = "black";
+    // for (let i = 0; i < changePriceColor.length; i++) {
+    //   changePriceColor[i].style.color = "blue";
+    // }
   }
   colorization = !colorization;
-  console.log(changePriceColor);
+  //   console.log(changePriceColor);
 };
