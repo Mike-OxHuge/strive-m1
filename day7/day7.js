@@ -209,6 +209,8 @@ inputField.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     // keyCode is deprecated, but it works.
     console.log(inputField.value);
+    inputField.value = "";
+    alert("see the console");
   }
 });
 
