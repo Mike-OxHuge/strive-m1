@@ -95,8 +95,12 @@ const addToTheSecond = function (content) {
   let newItem = document.createElement("li");
   content = ex5text.value;
   newItem.innerText = content;
-  newElement.appendChild(newItem);
-  ex5text.value = "";
+  if (newItem.innerText.length > 0) {
+    newElement.appendChild(newItem);
+    ex5text.value = "";
+  } else {
+    alert("can't add empty item!");
+  }
 };
 ex5.onclick = function () {
   addToTheSecond(ex5text);
