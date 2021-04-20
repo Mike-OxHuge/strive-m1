@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7</title>
+    <link rel="stylesheet" href="./day7-styles.css" />
+  </head>
+  <body>
+    <!-- Use HTML5 tags to divide the content of the page in a more semantic way. -->
+    <!-- added header and aside blocks -->
+    <header>
+      <h1>Day 7</h1>
+      <h4>It's a header</h4>
+      <h5>With a wrecked grid :)</h5>
+    </header>
+    <div class="main-wrap">
+      <aside>
+        <h6 style="text-align: center">This is aside block</h6>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=1"
+            alt="random picsum"
+          />
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=2"
+            alt="random picsum"
+          />
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=3"
+            alt="random picsum"
+          />
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=4"
+            alt="random picsum"
+          />
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=5"
+            alt="random picsum"
+          />
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/200/400?random=6"
+            alt="random picsum"
+          />
+        </div>
+      </aside>
+
+      <div class="exercises">
+        <!-- EXERCISE 1 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 1</h1>
+          <h6>
+            Write a function for changing the title of the document in something
+            else.
+          </h6>
+          <h2 id="ex1title">Title to be changed</h2>
+          <input type="text" id="ex1text" value="" />
+          <button id="ex1">And click me</button>
+        </div>
+
+        <!-- EXERCISE 2 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 2</h1>
+          <h6>
+            Write a function for changing the class of the title of the page in
+            "myHeading".
+          </h6>
+          <h1 id="ex2heading">The title with new styles</h1>
+          <button id="ex2">Change style</button>
+        </div>
+
+        <!-- EXERCISE 3 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 3</h1>
+          <h6>
+            Write a function for changing the text of only the p which are
+            children of a div.
+          </h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea autem
+            magnam officiis a laudantium voluptatibus minima et expedita sed
+            blanditiis eos hic quisquam mollitia vel, aliquid architecto,
+            aliquam quibusdam suscipit!
+          </p>
+          <button id="ex3">Change P text</button>
+        </div>
+
+        <!-- EXERCISE 4 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 4</h1>
+          <h6>
+            Write a function for changing the destination of every link to
+            https://www.google.com
+          </h6>
+          <p>but I don't have any links on the page... So i'll add some</p>
+          <ul>
+            <li><a href="https://yahoo.com">https://yahoo.com</a></li>
+            <li><a href="https://www.aol.com">https://www.aol.com</a></li>
+            <li>
+              <a href="https://www.microsoft.com">https://www.microsoft.com</a>
+            </li>
+          </ul>
+          <button id="ex4">Change links</button>
+        </div>
+
+        <!-- EXERCISE 5 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 5</h1>
+          <h6>Write a function for adding a new item in the second list.</h6>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+          <ol class="new-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+          <input type="text" id="ex5text" value="Input a new item here" />
+          <button id="ex5">Add new item</button>
+        </div>
+
+        <!-- EXERCISE 6 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 6</h1>
+          <h6>Write a function for adding a second paragraph to the div.</h6>
+          <h3>First paragraph</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed
+            ad porro culpa, debitis illo.
+          </p>
+          <h3>Second paragraph</h3>
+          <div id="ex6div"></div>
+          <input type="text" id="ex6input" value="write a new paragraph here" />
+          <button id="ex6">Add paragraph</button>
+        </div>
+
+        <!-- EXERCISE 7 -->
+        <div class="individual-exercise" id="ex7">
+          <h1>EXERCISE 7</h1>
+          <h6>Write a function for making the first UL disappear</h6>
+          <ul>
+            <li>First item in list one</li>
+            <li>Second item in list one</li>
+            <li>Third item in list one</li>
+          </ul>
+          <ul>
+            <li>First item in list two</li>
+            <li>Second item in list two</li>
+            <li>Third item in list two</li>
+          </ul>
+          <button id="ex7">Remove the first list</button>
+        </div>
+
+        <!-- EXERCISE 8 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 8</h1>
+          <h6>Write a function for making the background of every UL green.</h6>
+          <ul>
+            <li>Another list</li>
+            <li>Another list</li>
+            <li>Another list</li>
+          </ul>
+          <button id="ex8">Toggle green</button>
+        </div>
+
+        <!-- EXERCISE 9 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 9</h1>
+          <h6>
+            Make the heading of the page change color every time the user clicks
+            on it.
+          </h6>
+          <h1 id="ex9">Clickable heading of the page</h1>
+        </div>
+
+        <!-- EXERCISE 10 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 10</h1>
+          <h6>
+            Change the footer text with something else when the user clicks on
+            it.
+          </h6>
+          <button id="ex10">Change the footer text</button>
+        </div>
+
+        <!-- EXERCISE 11 -->
+        <div class="individual-exercise">
+          <h1>EXERCISE 11</h1>
+          <h6>
+            Attach an event listener to the input field in the page for console
+            logging its value just after any keystroke.
+          </h6>
+          <label>Write something, hit enter and see the console</label>
+          <input type="text" id="input-field" value="something" />
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <a href="/index.html"> Back to home</a>
+    <footer>
+      <h3 style="text-align: center">This is footer</h3>
+      <p id="footer-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        asperiores molestiae eum inventore. Dolorem dolor laboriosam, nemo
+        eligendi consequatur eveniet.
+      </p>
+    </footer>
+    <script src="./day7.js"></script>
+  </body>
+</html>

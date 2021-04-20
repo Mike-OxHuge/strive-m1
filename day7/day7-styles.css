@@ -1,0 +1,48 @@
+body {
+  background-color: rgba(127, 255, 212, 0.603);
+}
+.exercises {
+  display: grid;
+
+  margin: 0px 20px 0px 20px;
+  width: 90%;
+}
+.individual-exercise {
+  border: black 1px dashed;
+  padding: 10px;
+  margin: 10px;
+}
+.myHeading {
+  color: blueviolet;
+  font-style: italic;
+}
+ul {
+  list-style: none;
+}
+#ex9:hover {
+  cursor: pointer;
+}
+footer {
+  margin-top: 5px;
+  border-top: blueviolet 1px solid;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: blueviolet 1px solid;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: blueviolet 1px solid;
+  float: left;
+  margin-top: 5px;
+}
+aside img {
+  margin: 5px 5px 5px 0px;
+}
+.main-wrap {
+  display: flex;
+}
