@@ -96,6 +96,7 @@ const addToTheSecond = function (content) {
   content = ex5text.value;
   newItem.innerText = content;
   newElement.appendChild(newItem);
+  ex5text.value = "";
 };
 ex5.onclick = function () {
   addToTheSecond(ex5text);
