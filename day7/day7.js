@@ -112,7 +112,6 @@ const addParagraph = function (content) {
   let newParagraph = document.createElement("p");
   newParagraph.innerText = content;
   ex6div.appendChild(newParagraph);
-  console.log(ex6div);
 };
 ex6.onclick = function () {
   addParagraph();
