@@ -1,3 +1,25 @@
 body {
   background-color: cadetblue;
 }
+/* Create a CSS class for the task list item with a border, a bold text and a bigger font size */
+.task-list-item {
+  border: darkblue 2px dashed;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 2px;
+}
+
+/* Style every button of the page to be bigger */
+button {
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Create a CSS class for the task list with a diverse background */
+ul {
+  background-color: darkcyan;
+}
