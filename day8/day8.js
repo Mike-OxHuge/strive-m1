@@ -32,7 +32,8 @@ const addNewTask = function (param) {
 */
 // ain't done
 const removeLast = function () {
-  console.log("removeLast");
+  let taskList = document.getElementById("task-list").children;
+  taskList[taskList.length - 1].remove();
 };
 
 /* EXERCISE 7: 
@@ -40,7 +41,8 @@ const removeLast = function () {
 */
 // ain't done
 const removeFirst = function () {
-  console.log("removeFirst");
+  let taskList = document.getElementById("task-list").children;
+  taskList[0].remove();
 };
 
 /* EXERCISE 8: 
