@@ -39,7 +39,6 @@ const removeLast = function () {
 /* EXERCISE 7: 
     Create a method "removeFirst" which removes the first item from the task list
 */
-// ain't done
 const removeFirst = function () {
   let taskList = document.getElementById("task-list").children;
   taskList[0].remove();
@@ -87,7 +86,7 @@ const bubbleSort = function () {
   let arrayOfTasks = [];
   let tasks = document.querySelectorAll("ul li");
   for (let i = 0; i < tasks.length; i++) {
-    arrayOfTasks.push(tasks[i].innerText);
+    arrayOfTasks.push(tasks[i].innerText.toLowerCase());
   }
   arrayOfTasks.sort();
   tasks = document.querySelector("ul");
@@ -100,5 +99,6 @@ const bubbleSort = function () {
     newItem.innerText = arrayOfTasks[i];
     tasks.appendChild(newItem);
     newItem.classList.add("task-list-item");
+    newItem.classList.add("capitalize");
   }
 };
