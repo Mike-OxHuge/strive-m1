@@ -98,7 +98,6 @@ const bubbleSort = function () {
     let newItem = document.createElement("li");
     newItem.innerText = arrayOfTasks[i];
     tasks.appendChild(newItem);
-    newItem.classList.add("task-list-item");
-    newItem.classList.add("capitalize");
+    newItem.classList.add("task-list-item", "capitalize");
   }
 };
