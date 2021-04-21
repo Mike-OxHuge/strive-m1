@@ -74,15 +74,15 @@ const changeTaskBackgroundColor = function (bgcolor) {
 /* EXTRA */
 
 /* EXERCISE 10: 
-               Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
+ Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
             
-               Use your spare time to beautify your task list via CSS.
+ Use your spare time to beautify your task list via CSS.
 
-               Suggestion:
-               - Break the code into many function for semplicity 
-               - Reuse the functions previously created
+Suggestion:
+- Break the code into many function for semplicity 
+- Reuse the functions previously created
 */
-// not working
+
 const bubbleSort = function () {
   let arrayOfTasks = [];
   let tasks = document.querySelectorAll("ul li");
@@ -91,9 +91,14 @@ const bubbleSort = function () {
   }
   arrayOfTasks.sort();
   tasks = document.querySelector("ul");
-  console.log(tasks.children);
-  for (let i = 0; i < arrayOfTasks.length; i++) {
-    console.log(i);
+  for (let i = 0; i < tasks.children.length; i + 1) {
+    // i have no idea why it didn't work with i++
+    tasks.children[i].remove();
   }
-  console.log(arrayOfTasks);
+  for (let i = 0; i < arrayOfTasks.length; i++) {
+    let newItem = document.createElement("li");
+    newItem.innerText = arrayOfTasks[i];
+    tasks.appendChild(newItem);
+    newItem.classList.add("task-list-item");
+  }
 };
