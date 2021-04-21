@@ -83,21 +83,22 @@ Suggestion:
 */
 
 const bubbleSort = function () {
-  let arrayOfTasks = [];
-  let tasks = document.querySelectorAll("ul li");
+  let arrayOfTasks = []; // creating an empty array
+  let tasks = document.querySelectorAll("ul li"); // selecting li inside of ul
   for (let i = 0; i < tasks.length; i++) {
     arrayOfTasks.push(tasks[i].innerText.toLowerCase());
-  }
-  arrayOfTasks.sort();
-  tasks = document.querySelector("ul");
+  } // looping through and pushing lowerCase strings to the new array
+  arrayOfTasks.sort(); // sorting the array (by default it sorts alphabetically)
+  tasks = document.querySelector("ul"); // reselecting the ul (not sure if it's neccessary)
   for (let i = 0; i < tasks.children.length; i + 1) {
     // i have no idea why it didn't work with i++
     tasks.children[i].remove();
-  }
+  } // removing each children of the ul
   for (let i = 0; i < arrayOfTasks.length; i++) {
-    let newItem = document.createElement("li");
-    newItem.innerText = arrayOfTasks[i];
-    tasks.appendChild(newItem);
-    newItem.classList.add("task-list-item", "capitalize");
+    // looping through an array of sorted lower cased strings
+    let newItem = document.createElement("li"); // creating new li
+    newItem.innerText = arrayOfTasks[i]; // innerText of a new li as a string [i] from the array
+    tasks.appendChild(newItem); // appending new item
+    newItem.classList.add("task-list-item", "capitalize"); // appliying styles
   }
 };
