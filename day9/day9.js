@@ -15,11 +15,9 @@ window.onload = function () {
 
 const randomizeNumber = function () {
   let randomNumber = Math.floor(Math.random() * 76);
-  console.log(randomNumber);
   let spans = document.getElementsByTagName("span");
   for (let i = 0; i < spans.length; i++) {
     if (Number(spans[i].innerText) === randomNumber) {
-      console.log(`gotcha! ${spans[i].innerText} is equal to ${randomNumber}`);
       spans[i].classList.add("matching-cell");
     } else {
       spans[i].classList.remove("matching-cell");
