@@ -2,7 +2,8 @@ console.log("day 9 homework: the bingo game");
 
 let bingoBoard = document.getElementById("bingo-board");
 let created = false;
-let field;
+victory = false;
+let winningCondition = document.getElementsByClassName("matching-cell-ingame");
 
 window.onload = function () {
   for (let i = 1; i <= 76; i++) {
@@ -20,7 +21,7 @@ const randomizeNumber = function () {
   let min = 1;
   let max = 77;
   let randomNumber = Math.floor(Math.random() * (max - min) + min);
-  //   let spans = document.getElementsByTagName("span");
+
   let spans = document.querySelectorAll("#bingo-board div span");
   for (let i = 0; i < spans.length; i++) {
     if (Number(spans[i].innerText) === randomNumber) {
@@ -33,11 +34,14 @@ const randomizeNumber = function () {
     let fields = document.querySelectorAll("#playing-fields div span");
     for (let i = 0; i < fields.length; i++) {
       if (Number(fields[i].innerText) === randomNumber) {
-        fields[i].classList.add("matching-cell");
+        fields[i].classList.add("matching-cell-ingame");
       }
     }
   }
-  //   return randomNumber;
+  if (winningCondition.length > 23) {
+    alert("YOU WON!!! NOW START ALL OVER AGAIN");
+    location.reload();
+  }
 };
 
 const createPlayingField = function () {

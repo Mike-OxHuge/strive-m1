@@ -14,7 +14,8 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
-.matching-cell {
+.matching-cell,
+.matching-cell-ingame {
   background-color: red;
   border: 1px green double;
   padding: 5px;
