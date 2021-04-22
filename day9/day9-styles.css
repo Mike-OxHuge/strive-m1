@@ -1,3 +1,22 @@
 body {
   background-color: rgba(139, 0, 139, 0.452);
 }
+.bingo-cell {
+  display: inline-block;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  border: 1px blue solid;
+  margin: 2px;
+}
+.bingo-cell span {
+  display: inline-block;
+  margin-top: 10px;
+}
+.matching-cell {
+  background-color: red;
+  border: 1px green double;
+  padding: 5px;
+  font-weight: bolder;
+  color: blue;
+}

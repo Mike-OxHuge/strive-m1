@@ -8,9 +8,40 @@
     <link rel="stylesheet" href="./day9-styles.css" />
   </head>
   <body>
-    <h1>Day 9</h1>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <h1>Day 9.</h1>
+      <button onclick="randomizeNumber()" style="margin: 20px; cursor: pointer">
+        Get a random number
+      </button>
+      <h1>Bingo game.</h1>
+    </div>
 
+    <div class="main-wrap">
+      <div
+        id="bingo-board"
+        style="
+          text-align: center;
+          border: 1px black dashed;
+          padding: 5px 0px 5px 0px;
+        "
+      >
+        <!-- bingo cells going here -->
+      </div>
+    </div>
+    <br />
     <a href="/index.html"> Back to home</a>
     <script src="./day9.js"></script>
   </body>
 </html>
+<!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (eg. avoid randoming the number 10 3 times)
+        - Create a USER BOARD with 24 randomized numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    -->
