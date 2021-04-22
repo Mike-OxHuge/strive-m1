@@ -2,7 +2,6 @@ console.log("day 9 homework: the bingo game");
 
 let bingoBoard = document.getElementById("bingo-board");
 let created = false;
-victory = false;
 let winningCondition = document.getElementsByClassName("matching-cell-ingame");
 
 window.onload = function () {
@@ -41,6 +40,12 @@ const randomizeNumber = function () {
   if (winningCondition.length > 23) {
     alert("YOU WON!!! NOW START ALL OVER AGAIN");
     location.reload();
+  } else {
+    console.log(
+      `You've matched ${winningCondition.length}/24 tiles. ${
+        24 - winningCondition.length
+      } left! Keep going!`
+    );
   }
 };
 
