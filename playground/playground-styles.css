@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+}
+body {
+  scroll-behavior: smooth;
+}
+.block:nth-child(odd) {
+  background-color: #8b008b;
+}
+.block:nth-child(even) {
+  background-color: #008b07;
+}
+.block {
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
