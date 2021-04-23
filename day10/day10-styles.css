@@ -55,3 +55,11 @@ tr {
   /* might be wrong tho */
   margin: 0;
 }
+
+.exercise41 {
+  border-radius: 20px;
+}
+
+.hidden {
+  display: none;
+}
