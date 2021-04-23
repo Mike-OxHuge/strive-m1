@@ -1,0 +1,57 @@
+/* 11) Give a maximum width to the body and center it in the page */
+body {
+  background-color: #ff8c007e;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* 12) Set every h1 to be centered */
+h1 {
+  text-align: center;
+}
+
+/* 13) Change the color of each link in the page */
+a {
+  color: darkred;
+}
+
+/* 14) Create a class with a border */
+.border-class {
+  border: 1px black solid;
+}
+
+/* 15) Set table to have rounded corners */
+table {
+  border: 1px black solid;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* 16) Add margin between every paragraph */
+p {
+  margin: 10px 5px 10px 5px;
+}
+
+/* 17) Create a class which change font size and boldness */
+.font-size-and-boldness {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* 18) Create a class to hide a content */
+.hidden {
+  display: none;
+}
+
+/* 19) Add a green border to each td */
+td {
+  border: 3px red dotted;
+  border-radius: 5px;
+}
+
+/* 20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) ) */
+tr {
+  /* I think I already did it by styling td */
+  /* might be wrong tho */
+  margin: 0;
+}
