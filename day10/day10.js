@@ -74,12 +74,33 @@ const longDongArray = function (a, b) {
 longDongArray(arrayOfArrays, arrayOfHundred);
 
 // 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-const higherSum = function (a, b) {
-  let one = a.reduce((a, b) => a + b, 0);
-  let two = b.reduce((a, b) => a + b, 0);
+const higherSum = function (x, y) {
+  let one = x.reduce((a, b) => a + b, 0);
+  let two = y.reduce((a, b) => a + b, 0);
+  let result;
   if (one > two) {
-    return one;
+    result = one;
   }
+  return result;
 };
-let output = higherSum(arrayOfHundred, arrayOfHundred2);
-console.log(output);
+higherSum(arrayOfHundred, arrayOfHundred2);
+// console.log(higherSum(arrayOfHundred, arrayOfHundred2));
+
+// DOM
+// 31) Get element with ID "container" from the page
+let container = document.getElementById("container");
+
+// 32) Get every "td" from the page
+let everyTd = document.getElementsByTagName("td");
+
+// 33) Create a cycle that prints the text inside every td of the page
+for (let i = 0; i < everyTd.length; i++) {
+  console.log(everyTd[i].innerText);
+}
+
+// 34) Write a function to change the heading of the page
+const changeHeading = function (newText) {
+  let heading = document.getElementById("heading");
+  heading.innerText = newText;
+};
+changeHeading("Created heading for exercise 2 and changed for exercise 34");
