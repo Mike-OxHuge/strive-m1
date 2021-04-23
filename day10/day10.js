@@ -104,3 +104,132 @@ const changeHeading = function (newText) {
   heading.innerText = newText;
 };
 changeHeading("Created heading for exercise 2 and changed for exercise 34");
+
+// 35) Write a function to add an extra row to the table
+const addRow = function () {
+  let table = document.getElementById("table");
+  let newTr = document.createElement("tr");
+  newTr.innerHTML = `<td colspan="5">New row created for exercise 35</td>`;
+  table.appendChild(newTr);
+};
+addRow();
+
+// 36) Write a function to add the class "test" to each row in the table
+const addClass = function () {
+  let eachRow = document.getElementsByTagName("tr");
+  for (let i = 0; i < eachRow.length; i++) {
+    eachRow[i].classList.add("test");
+  }
+};
+addClass();
+
+// 37) Write a function to add a red background to every link in the page
+const addBackground = function () {
+  let everyLink = document.getElementsByTagName("a");
+  for (let i = 0; i < everyLink.length; i++) {
+    everyLink[i].style.backgroundColor = "red";
+  }
+};
+addBackground();
+
+// 38) Console log "Page loaded" when the page is correctly loaded
+window.onload = function () {
+  console.log("Page loaded");
+};
+
+// 39) Write a function to add new items to a UL
+const addToUl = function () {
+  let ul = document.getElementById("ul");
+  let li = document.createElement("li");
+  li.innerText = "New element of UL for exercise 39";
+  ul.appendChild(li);
+};
+addToUl();
+
+// 40) Write a function to empty a list
+const emptyTheList = function () {
+  let ol = document.getElementById("ol");
+  let li = document.createElement("li");
+  li.innerText =
+    "I had to remove this list for an exercise 40, but I am pushing this element to sorta keep the progress of exercise 3";
+  ol.innerHTML = "";
+  ol.appendChild(li);
+};
+emptyTheList();
+
+// EXTRA
+// 41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+// couldn't really manage it, the page is full of links (remember, every picture has a link!)
+// so if I fire an alert with URL the page becomes totally screwed. And I don't want to deal with
+// tooltips in vanilla
+// so here's inserting before the anchor itself. And writes in the console
+// I didn't like this exercise :(
+let everyLink = document.getElementsByTagName("a");
+let somewhere = document.getElementsByTagName("a");
+console.log(somewhere);
+for (let i = 0; i < everyLink.length; i++) {
+  everyLink[i].addEventListener(
+    "mouseover",
+    function (event) {
+      let url = everyLink[i].getAttribute("href");
+      let block = document.createElement("span");
+      block.innerText = url;
+      somewhere[i].parentElement.insertBefore(block, everyLink[i]);
+      event.target.classList.add("exercise41");
+      //   alert(`The URL IS: ${url}`);
+      console.log(`The URL IS: ${url}`);
+    },
+    false
+  );
+}
+
+// 42) Add a button to hide every image on the page
+let button = document.createElement("button");
+let isHidden = false;
+button.innerText = "hide all the images";
+let intersection = document.getElementById("span").parentElement;
+intersection.appendChild(button);
+
+button.onclick = function hideImages() {
+  let images = document.getElementsByTagName("img");
+  if (!isHidden) {
+    for (let i = 0; i < images.length; i++) {
+      images[i].classList.add("hidden");
+      // could be done with images[i].style.display = 'none'
+      button.innerText = "show all the images";
+    }
+  } else {
+    for (let i = 0; i < images.length; i++) {
+      images[i].classList.remove("hidden");
+      // could be done with images[i].style.display = 'block'
+      button.innerText = "hide all the images";
+    }
+  }
+  isHidden = !isHidden;
+};
+
+// 43) Add a button to hide and show the table from the page
+// here I'll create an HTML button
+let button4table = document.getElementById("button4table");
+let isTableHidden = false;
+button4table.onclick = function hideTheTable() {
+  let table = document.getElementById("table");
+  if (!isTableHidden) {
+    table.classList.add("hidden");
+    button4table.innerText = "Show the Table";
+  } else {
+    table.classList.remove("hidden");
+    button4table.innerText = "Hides the Table";
+  }
+  isTableHidden = !isTableHidden;
+};
+
+// 44) Write a function to sum every number inside the TD (if the content is numeric)
+// something about match and/or find and/or filter all those values and then .reduce
+// 45) Delete the last letter from the title each time the user clicks on it
+// 46) Change a single TD background color when the user clicks on it
+// 47) Add a button DELETE, on click it should delete a random TD from the page
+// 48) Add a pink border to a cell when the mouse is over it
+// 49) Write a function to add a table with 4 rows and 3 columns programmatically
+// 50) Write a function to remove the table from the page
+// naaaah, enough for me :) I can taste vanilla in my mouth.
